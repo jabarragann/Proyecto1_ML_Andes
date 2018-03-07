@@ -2,8 +2,8 @@ import pandas as pd
 import numpy as np
 
 
-training = pd.read_csv('trainingSetGenre.csv')
-test = pd.read_csv('testSetGenre.csv')
+training = pd.read_csv('exerciseData/trainingSetGenre.csv')
+test = pd.read_csv('exerciseData/testSetGenre.csv')
 
 
 print(training.head().data_base_index)
