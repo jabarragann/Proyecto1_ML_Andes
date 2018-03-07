@@ -121,8 +121,8 @@ def stochasticGradientDescent (X, y, theta, alpha, numIters):
     
     return theta,costHistory
 
-xt_file ='xTRAIN10.txt'
-yt_file ='yTRAIN10.txt' 
+xt_file ='exerciseData/xTRAIN10.txt'
+yt_file ='exerciseData/yTRAIN10.txt'
 
 alpha = 0.06 
 numIters=240
@@ -191,11 +191,11 @@ if __name__ == "__main__":
 
 
     ##Evaluate unseen data
-    newData = getData("xTEST10.txt")
+    newData = getData("exerciseData/xTEST10.txt")
 
     result =  xTest @ theta
 
-    resultFile=open("xTEST10Result.txt",'w')
+    resultFile=open("exerciseData/xTEST10Result.txt",'w')
     for i in result:
         resultFile.write( str(i[0])+"\n")
 

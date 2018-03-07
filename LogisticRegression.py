@@ -5,13 +5,13 @@ import time
 
 
 def createDataSet():
-    data = pd.read_csv('msd_genre_dataset.csv')
+    data = pd.read_csv('exerciseData/msd_genre_dataset.csv')
 
     metalPunkData = data[(data.genre == 'metal') | (data.genre == 'punk') ]
-    metalPunkData.to_csv("Metal_Punk.csv")
+    metalPunkData.to_csv("exerciseData/Metal_Punk.csv")
 
     danceElectronicaData = data[(data.genre == 'dance and electronica')]
-    danceElectronicaData.to_csv("Dance_Electronica.csv")
+    danceElectronicaData.to_csv("exerciseData/Dance_Electronica.csv")
 
     # Remove Track_id, artist_name, title
     print("Dance data size:",danceElectronicaData.shape[0])
@@ -41,8 +41,8 @@ def createDataSet():
     print("Test set size:", testSet.shape[0])
 
     # Save Training Set And Test Set
-    trainingSet.to_csv("trainingSetGenre.csv")
-    testSet.to_csv("testSetGenre.csv")
+    trainingSet.to_csv("exerciseData/trainingSetGenre.csv")
+    testSet.to_csv("exerciseData/testSetGenre.csv")
 
 def getValues(dataSet):
 
@@ -211,8 +211,8 @@ if __name__ == '__main__':
     #createDataSet()
 
     #Read DataSet
-    testSet = pd.read_csv('testSetGenre.csv')
-    trainingSet = pd.read_csv('trainingSetGenre.csv')
+    testSet = pd.read_csv('exerciseData/testSetGenre.csv')
+    trainingSet = pd.read_csv('exerciseData/trainingSetGenre.csv')
 
     #Split X and Y data
     trainingX,trainingY=getValues(trainingSet)

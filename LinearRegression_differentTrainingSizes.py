@@ -119,8 +119,8 @@ def stochasticGradientDescent (X, y, theta, alpha, numIters):
 
     return theta,costHistory
 
-xt_file ='xTRAIN10.txt'
-yt_file ='yTRAIN10.txt'
+xt_file ='exerciseData/xTRAIN10.txt'
+yt_file ='exerciseData/yTRAIN10.txt'
 
 alpha = 0.06
 numIters=400
